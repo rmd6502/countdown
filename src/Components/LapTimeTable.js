@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 export default class LapTimeTable extends Component {
     render() {
         const rows = this.props.lapTimes.map((row, index) => 
-            <tr key={index}><td>{row}</td></tr>
+            <tr key={index} className="lapTime"><td>{index}</td><td>{row}</td></tr>
         )
         return (
-            <table><tbody>
+            <div className="lapTime"><table><tbody>
                 {rows}
-            </tbody></table>
+            </tbody></table></div>
         )
     }
 }
