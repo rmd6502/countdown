@@ -26,7 +26,7 @@ export default class CountdownTimer extends Component {
                 countDown: this.props.initialTime,
                 lapTimes: []
             })
-            this.state.worker.postMessage({"time":props.initialTime})
+            this.state.worker.postMessage({"time":this.props.initialTime})
         }
     }
 
