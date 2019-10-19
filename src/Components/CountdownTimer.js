@@ -9,7 +9,7 @@ export default class CountdownTimer extends Component {
             countDown: props.initialTime,
             running: false,
             interval: null,
-            worker: new Worker('/counterWorker.js'),
+            worker: new Worker('counterWorker.js'),
             lapTimes: []
         }
         this.frameRate = 40
