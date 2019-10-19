@@ -64,7 +64,7 @@ export default class CountdownTimer extends Component {
                 if (this.state.running) {
                     this.toggleRunning()
                 }
-                this.state.worker.terminate()
+                //this.state.worker.terminate()
                 this.props.callback()
             }
         }
@@ -82,7 +82,7 @@ export default class CountdownTimer extends Component {
         
         return (
             <div>
-                <p>
+                <p className="countdown">
                     {this.formatTime(timeLeft)}
                 </p>
                 <TimerButtons toggleRunning={this.toggleRunning} onReset={this.onReset} running={this.state.running} />
